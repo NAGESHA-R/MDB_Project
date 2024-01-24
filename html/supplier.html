@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suppliers</title>
+    <script src="https://kit.fontawesome.com/7a6a1ea4e3.js" crossorigin="anonymous"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../javaScript/index.js"></script>
+    <style>
+        .home {
+            text-decoration: none;
+            color: rgb(21, 70, 72);
+            border: 1px solid;
+            padding: 7px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgb(46, 46, 7);
+            font-size: 24px;
+            background-color: rgba(255, 68, 0, 0.777);
+        }
+
+        #add {
+            color: white;
+            background-color: rgb(39, 4, 176);
+            margin-right: 10%;
+        }
+
+        #supplierContainer {
+            background-color: rgba(255, 140, 0, 0.6);
+            width: 100%;
+            height: 20vh;
+            border-radius: 20px;
+            box-shadow: 0 0 15px;
+        }
+        #supadding{
+            position: absolute;
+            top: 55px;
+            left: 150px;
+            background-color: rgb(178, 178, 212);
+            width: 80%;
+            height: 70vh;
+            display: none;
+            border: 2px solid black;
+            border-top-right-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <p style="text-align: right;margin:30px;"><a class="home" href="./option.html">Home</a>
+    </p>
+    <p style="text-align: right;"><button id="add" onclick="let disPop=document.querySelector('#supadding');
+        disPop.style.display='block';"><i class="fa-sharp fa-solid fa-plus"></i>&nbsp;Add
+            Suppliers</button></p>
+    <h3>List of Suppliers</h3>
+    <div id="supplierContainer"></div>
+    <div id="supadding">
+        <p style="text-align: right;"><button style="border-radius: 20px;color:red;" onclick="let disPop=document.querySelector('#supadding');
+            disPop.style.display='none';">exit</button>
+        </p>
+        <table border="1">
+            <thead>
+                <tr>
+                <th>Supplier Id</th>
+                <th>Supplier Name</th>
+                <th>Mail</th>
+                <th>Phone</th>
+                <th>Item Name</th>
+                <th>action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input id="id" type="text"></td>
+                    <td><input id="supname" type="text"></td>
+                    <td><input id="supmail" type="text"></td>
+                    <td><input id="suphone" type="number"></td>
+                    <td><input id="item" type="text"></td>
+                    <td><button id="adding">add</button>OR<button id="update">Update</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

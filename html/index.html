@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../javaScript/index.js" type="text/javaScript"></script>
+    <script src="../javaScript/functionsIndex.js" type="text/javaScript"></script>
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            width: auto;
+            margin: 0;
+            background-color: black;
+        }
+
+        nav {
+            /* padding: 10px; */
+            text-align: right;
+            border-radius: 20px;
+
+        }
+
+        #log,
+        #reg {
+            font-size: 25px;
+            font-family: monospace;
+            border: none;
+            color: rgb(255, 255, 255);
+            
+            background-color: black;
+            margin-right: 20px;
+        }
+        #log:hover{
+            cursor: url('https://www.licious.in/blog/wp-content/uploads/2022/03/Chicken-Curry-Cut-min-750x750.png');
+        }
+
+        .middle {
+            width: 100%;
+            mix-blend-mode: soft-light;
+            text-align: right;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        #logContain {
+            /* display:inline; */
+            width: 40%;
+            border: 2px solid;
+            border-radius: 20px;
+            border-color: rgb(145, 224, 248);
+            box-shadow: 0px 0 20px black;
+            padding: 7px;
+        }
+
+        #regContain {
+            width: 40%;
+            display: inline;
+            border: 2px solid;
+            border-radius: 20px;
+            border-color: rgb(145, 224, 248);
+            box-shadow: 0px 0 20px black;
+            padding: 7px;
+        }
+
+        textarea,
+        input {
+            margin-bottom: 5px;
+            padding: 7px;
+            border-radius: 20px;
+            width: 75%;
+            outline: none;
+        }
+        label {
+            color: white;
+            font-size: 20px;
+        }
+
+        .h,h3{
+            font-size: 26px;
+            color: rgb(42, 170, 174);
+            margin-left:5%;
+        }
+
+        .containerImages {
+            background-image: url('../images/cycle.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .heading {
+            font-weight: bold;
+            font-size: 26px;
+            color: rgb(231, 183, 8);
+            font-family: 'Arial Narrow Bold', sans-serif, monospace;
+            text-shadow: 0 0 10px black;
+            letter-spacing: 2px;
+
+        }
+        li{
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containerImages">
+        <h3 class="heading">Products Inventory<span style="color:red"> Management System</span></h3>
+        <nav>
+            <button id="log" onclick="moveto()">Login</button>
+            <button id="reg" onclick="moveto()">Register</button>
+        </nav>
+        <div class="middle">
+            <img style="border-radius: 50%;margin-top:15px;" class="importance" src="../images/importance.jpg" alt="cycle Inventory">
+
+        </div>
+        <p style="color:rgb(255, 255, 255);font-size:20px;">The product inventory gives the overview of the different product, It has
+            features like adding/removing
+            products, managing suppliers, and generating inventory reports.</p>
+    </div>
+    <div style="color:white">
+        <h3 class="h">Benefits of inventory management systems: </h3>
+        <ul>
+            <li>Greater inventory visibility: inventory systems allow you to track all your inventory movements, so you
+                always know how much stock of each item you have, where it's located, and when to reorder.</li>
+            <li>Meet customer demand: an accurate system can help you reduce stockouts, meaning you never miss out on
+                potential sales and are able to provide good customer service.</li>
+            <li>Understand your profitability: by recording all your inventory data in a system, you can break down the
+                costs of producing and selling goods. This is useful for understanding the total value of your inventory
+                and determining profitability at the product and business levels.</li>
+            <li>Improves workflow efficiency: when you use a system to track and manage inventory, you don't have to
+                manually check how much stock is available every time you need to know.</li>
+            <li>Essential for accurate financial reporting: accounting for inventory is impossible if you don't keep
+                track of your stock and purchases. Inventory management systems provide an effective way of monitoring
+                the true value and profitability of your business.</li>
+        </ul>
+    </div>
+    <div id="container">
+        <div id="regContain">
+            <h3>Registration</h3>
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" autocomplete="off"><br>
+                <label for="mail">Mail:</label><br>
+                <input type="text" id="mail" autocomplete="off"><br>
+                <label for="phone">Phone:</label><br>
+                <input type="number" id="phone" autocomplete="off"><br>
+                <label for="adss">Address:</label><br>
+                <textarea rows="4" cols="20" placeholder="Enter your address.." id="adss" autocomplete="off"></textarea><br>
+                <label for="password">new password:</label><br>
+                <input type="password" id="password" autocomplete="off"><br>
+                <label for="cpassword">confirm password:</label><br>
+                <input type="password" id="cpassword" autocomplete="off"><br>
+                <button id="regbtn" onclick="Regvalidate()">submit</button>
+            </form>
+        </div>
+        <div id="logContain">
+            <h3>Login</h3>
+            <form action="./option.html">
+                <label for="pnumber">Phone Number:</label><br>
+                <input type="text" id="pnumber"><br>
+                <label for="pword">password:</label><br>
+                <input type="password" id="pword"><br>
+                <button id="logbtn" onclick="logvalidate();">submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
